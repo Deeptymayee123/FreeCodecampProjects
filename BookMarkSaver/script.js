@@ -3,7 +3,7 @@ const bookmarkUrl = document.querySelector("#bookmark-url");
 const addBookmarkBtn = document.querySelector("#added-bookmark");
 const bookmarkList = document.querySelector("#bookmark-list");
 
-//for storing the value in localstorage, so after refresh we can check
+//for storing the value in localstorage, so after refresh we can see store element
 document.addEventListener("DOMContentLoaded", loadBookmarks);
 
 addBookmarkBtn.addEventListener("click", function () {
@@ -62,8 +62,8 @@ function loadBookmarks() {
 
 function removeBookmarkFromStorage(name, url) {
   let bookmarks = getBookmarksfromStorage();
-  bookmarks = bookmarks.filter(
-    (bookmark) => bookmark.name !== name || bookmark.url !== url,
-  );
-  // localStorage.setItem("bookmark", JSON.stringify(bookmarks));
+  bookmarks = bookmarks.filter((bookmark) => {
+    return bookmark.name !== name || bookmark.url !== url;
+  });
+  localStorage.setItem("bookmark", JSON.stringify(bookmarks));
 }
