@@ -18,12 +18,17 @@
           <p class="question-text">Question: How are you?</p>
           <div class="qnumberScore">
             <p>
-              Questions <span id="qNumber">1</span> of
-              <span id="qTotal">5</span>
+              Questions <span id="qNumber"></span> of
+              <span id="qTotal"></span>
             </p>
             <p>Score: <span id="score">0</span></p>
           </div>
-          <div class="buttons"></div>
+        </div>
+        <div id="answers-container" class="answers-container">
+          <!-- Answer buttons will be inserted here from our js code later at some point -->
+        </div>
+        <div class="progres-bar">
+          <div id="progres" class="progres"></div>
         </div>
       </div>
       <div class="screen" id="result-screen">
@@ -32,10 +37,11 @@
           You scored <span class="scoreGet"></span> out of
           <span class="scoreTotal"></span>
         </p>
-        <p>Good Effort! keep learning!</p>
+        <p id="resultMsg">Good Effort! keep learning!</p>
         <button class="restartQuiz">Restart Quiz</button>
       </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./script1.js"></script>
+    <!-- <script src="./script.js"></script> -->
   </body>
 </html>
